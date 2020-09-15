@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='style.css'>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Resume</title>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="head">
+            <hr>
+            <h2>Resume. Junior Frontend Developer</h2>
+            <hr>
+        </div>
+
+        <div class='profile'>
+            <div class='profile__info'>
+
+                <h4>1. First Name, Last Name</h4>
+                <p>Hello, world! My name is <strong>Viktor Bashincheev</strong></p>
+
+                <h4>2. Contact Info</h4>
+                <a href="mailto:someone@yoursite.com" class='link'>
+                    reagent03@gmail.com
+                </a>
+                <span> , </span>
+                <a href="tel:+79021616999" class='link'>
+                    +7-902-1616-999
+                </a>
+                <span> , </span>
+                <a target='_blank'href='https://spb.hh.ru/resume/04cd0dbdff0806d24b0039ed1f376169746c41' class='link'>
+                    hh.ru
+                </a>
+                <span> , </span>
+                <a target='_blank' href='https://github.com/reagentJS' class='link'>
+                    github
+                </a>
+
+                <h4>3. Summary (your goal, wishes, reveal what is important for you, what do you want and why</h4>
+                <p>
+                    My purpose - to became a developer because at the moment programming is my hobby and I like it. I do
+                    love solve logical tasks. Mostly I like algorithm tasks on codewars
+                </p>
+
+            </div>
+            <div class="profile__photo" title="It's me">
+                <img src='images/photo1.jpg' alt='profile-photo' class='image'>
+            </div>
+        </div>
+
+        <h4>4. Skills</h4>
+        <p>
+            I learn Frontend-developing since February 2020. Javascript is my main programming language. I can typeset
+            (verstka). Also, I use BEM-methodology, bootstrap and scss. I had started to study framework react, but
+            realized that it was too early… I will go back to react in the future
+        </p>
+
+        <h4>5. Code examples (LATEST)</h4>
+        <div class='code__container'>
+            <pre>
+
+    // Currency converter
+        
+    function calcExchangeRate(currency1, currency2) {
+        const api = `https://api.exchangeratesapi.io/latest?symbols=${currency1},${currency2}`;
+        async function getCurrency() {
+            const response = await fetch(api);
+            const val = await response.json();
+            return val;
+        }
+        getCurrency().then(val => {
+            let res = val.rates[currency2] / val.rates[currency1];
+            res = Math.round(res * 100) / 100;
+            console.log(res);  // <--------------------------------> 76.39 (1 USD == 76.39 RUB)
+        });
+    }
+    calcExchangeRate('USD', 'RUB');
+            </pre>
+        </div>
+
+        <h4>6. Experience</h4>
+        <p>You can look at my projects in my <a target='_blank' href='https://github.com/reagentJS' class='link'>github</a> account</p>
+
+        <h4>7. Education</h4>
+        <p>Unfortunately, I haven’t serious education expierence in programming except self-education</p>
+
+        <h4>8. English</h4>
+        <p>My English level - B1 (I get а sertificate of the school English tochka)</p>
+
+    </div>
+
+</body>
+
+</html>
